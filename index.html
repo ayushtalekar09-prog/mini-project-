@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today – a one-page task list</title>
+  <meta name="description" content="A minimal task list. Type a task, press Enter, tick it off.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1 id="day"></h1>
+      <p id="date"></p>
+    </header>
+
+    <form id="add" autocomplete="off">
+      <label for="task" class="sr">New task</label>
+      <input id="task" type="text" placeholder="Add a task and press Enter" maxlength="120" required>
+    </form>
+
+    <ul id="list" aria-live="polite"></ul>
+    <p id="empty">Nothing to do yet. Add your first task above.</p>
+
+    <footer>
+      <span id="count"></span>
+      <button id="clear" type="button">Clear done</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
